@@ -7,6 +7,10 @@
 </head>
 <body>
 <div class="root">
+    <marquee class="construction-marquee" behavior="scroll" direction="left" scrollamount="6">
+        🚧 THIS SITE IS UNDER HEAVY CONSTRUCTION!!! CHECK BACK FOR MORE COOL STUFF!!! 🌊🐠
+    </marquee>
+
     <div class="site-banner">
         <span class="site-banner-prefix" id="obfuscated-prefix">3G36723</span>
         <span class="site-banner-text">'S AWESOME WEBSITE!!!</span>
@@ -100,7 +104,9 @@
         </li>
     </ul>
 </div>
-
+<p class="last-updated">
+    Last Updated: <span id="last-updated-date">Loading...</span>
+</p>
 <script>
     (function () {
         const prefixEl = document.getElementById("obfuscated-prefix");
@@ -123,6 +129,17 @@
         updatePrefix();
         setInterval(updatePrefix, 350);
     })();
+
+    const lastUpdatedEl = document.getElementById("last-updated-date");
+    if (lastUpdatedEl) {
+        const now = new Date();
+        const formatted = now.toLocaleDateString(undefined, {
+            year: "numeric",
+            month: "long",
+            day: "numeric"
+        });
+        lastUpdatedEl.textContent = formatted;
+    }
 </script>
 </body>
 </html>

@@ -145,3 +145,53 @@ p {
         transform: translateX(160%);
     }
 }
+
+.construction-marquee {
+    margin: 12px auto 28px;
+    padding: 6px 0;
+    width: 100%;
+    font-size: 18px;
+    font-weight: bold;
+    color: #ffffff;
+
+    background: linear-gradient(90deg, #00b4d8, #48cae4, #52b788);
+    border: 2px dashed #ffffff;
+    border-radius: 12px;
+    text-shadow: 0 0 6px rgba(0,0,0,0.4);
+    box-shadow:
+            0 4px 10px rgba(0, 80, 120, 0.3),
+            0 0 20px rgba(100, 255, 200, 0.4);
+
+    animation: marquee-glow 2.2s ease-in-out infinite;
+}
+
+/* flashy lights just like they would’ve wanted */
+@keyframes marquee-glow {
+    0% { box-shadow: 0 0 10px #00eaff; }
+    50% { box-shadow: 0 0 20px #68ff9b; }
+    100% { box-shadow: 0 0 10px #00eaff; }
+}
+
+.construction-marquee:hover {
+    filter: hue-rotate(90deg);
+    cursor: wait; /* because “construction” */
+}
+.last-updated {
+    margin-top: 40px;
+    font-size: 14px;
+    text-align: center;
+    color: #ffffff;
+    opacity: 0.85;
+
+    background: linear-gradient(90deg, #00b4d8, #48cae4, #52b788);
+    padding: 10px 14px;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+    border: 2px dashed #ffffff;
+
+    box-shadow:
+            0 4px 10px rgba(0, 80, 120, 0.15),
+            0 0 18px rgba(0, 200, 180, 0.15);
+}
