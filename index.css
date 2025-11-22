@@ -1,0 +1,81 @@
+/* full-page deep blue water background */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: "Comic Sans MS", "Papyrus", cursive;
+    background-image: url("02.png");
+    background-repeat: repeat;
+    color: #00FFEE;
+}
+
+/* center everything like a personal shrine */
+.root {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px;
+    border: 5px ridge #ff00ff;
+    background: rgba(0, 0, 50, 0.6);
+    box-shadow: 0 0 25px #00ffff;
+}
+
+/* headings with gaudy rainbow shadows */
+h1 {
+    font-size: 48px;
+    color: #FFFF00;
+    text-transform: uppercase;
+    text-shadow:
+            2px 2px 0 red,
+            -2px -2px 0 lime,
+            2px -2px 0 blue,
+            -2px 2px 0 magenta;
+    margin: 20px 0 10px;
+}
+
+/* neon glowing HR */
+hr {
+    border: none;
+    height: 4px;
+    background: linear-gradient(90deg, red, yellow, lime, cyan, blue, magenta, red);
+    margin-bottom: 25px;
+    animation: glow 2s infinite linear;
+}
+
+@keyframes glow {
+    0% { box-shadow: 0 0 10px red; }
+    50% { box-shadow: 0 0 20px cyan; }
+    100% { box-shadow: 0 0 10px red; }
+}
+
+/* Links: Underline always. Flashy hover. */
+a {
+    color: #00FFFF;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+a:hover {
+    color: #FF00FF;
+    background: yellow;
+}
+
+/* bulleted lists with giant star bullets */
+ul {
+    list-style-type: "★ ";
+    font-size: 20px;
+    padding-left: 20px;
+}
+
+/* paragraphs floating gently like angel text */
+p {
+    background: rgba(0, 255, 255, 0.15);
+    border: 2px dashed #00ffea;
+    padding: 8px;
+    margin: 20px 0;
+    animation: shimmer 5s infinite alternate;
+}
+
+@keyframes shimmer {
+    from { color: #00FFEE; }
+    to { color: #FFFFFF; }
+}
