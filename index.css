@@ -3,7 +3,7 @@ body, html {
     margin: 0;
     padding: 0;
     font-family: "Comic Sans MS", "Papyrus", cursive;
-    background-image: url("02.png");
+    background-image: url("background.png");
     background-repeat: repeat;
     color: #00FFEE;
 }
@@ -78,4 +78,70 @@ p {
 @keyframes shimmer {
     from { color: #00FFEE; }
     to { color: #FFFFFF; }
+}
+
+.site-banner {
+    margin: -10px -20px 30px -20px;
+    padding: 16px 24px;
+    border-radius: 18px 18px 0 0;
+    background: linear-gradient(90deg, #0077b6, #00c9a7, #9ef01a);
+    box-shadow:
+            0 6px 16px rgba(0, 80, 120, 0.35),
+            0 0 24px rgba(0, 200, 180, 0.5);
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: #ffffff;
+    position: relative;
+    overflow: hidden;
+}
+
+/* subtle shiny highlight */
+.site-banner::before {
+    content: "";
+    position: absolute;
+    top: -80%;
+    left: -40%;
+    width: 60%;
+    height: 260%;
+    background: radial-gradient(circle at 0 50%, rgba(255,255,255,0.7), transparent 55%);
+    opacity: 0.7;
+    animation: banner-sheen 5s linear infinite;
+}
+
+.site-banner-prefix {
+    font-weight: 900;
+    font-size: 30px;
+    margin-right: 4px;
+    display: inline-block;
+    animation: spinny 1.2s ease-in-out infinite alternate;
+}
+
+.site-banner-text {
+    font-weight: 800;
+    font-size: 24px;
+    text-shadow: 0 0 8px rgba(0, 0, 0, 0.35);
+}
+
+/* spinning-ish wobble for prefix */
+@keyframes spinny {
+    0% {
+        transform: rotate(-6deg) scale(1);
+    }
+    50% {
+        transform: rotate(4deg) scale(1.05);
+    }
+    100% {
+        transform: rotate(-3deg) scale(1.02);
+    }
+}
+
+/* sheen swipe */
+@keyframes banner-sheen {
+    0% {
+        transform: translateX(-120%);
+    }
+    100% {
+        transform: translateX(160%);
+    }
 }
