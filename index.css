@@ -1,0 +1,186 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: "Comic Sans MS", "Papyrus", cursive;
+    background-image: url("background.png");
+    background-repeat: repeat;
+    color: #00FFEE;
+}
+
+.root {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px;
+    border: 5px ridge #ff00ff;
+    background: rgba(0, 0, 50, 0.6);
+    box-shadow: 0 0 25px #00ffff;
+}
+
+h1 {
+    font-size: 48px;
+    color: #FFFF00;
+    text-transform: uppercase;
+    text-shadow:
+            2px 2px 0 red,
+            -2px -2px 0 lime,
+            2px -2px 0 blue,
+            -2px 2px 0 magenta;
+    margin: 20px 0 10px;
+}
+
+hr {
+    border: none;
+    height: 4px;
+    background: linear-gradient(90deg, red, yellow, lime, cyan, blue, magenta, red);
+    margin-bottom: 25px;
+    animation: glow 2s infinite linear;
+}
+
+@keyframes glow {
+    0% { box-shadow: 0 0 10px red; }
+    50% { box-shadow: 0 0 20px cyan; }
+    100% { box-shadow: 0 0 10px red; }
+}
+
+a {
+    color: #00FFFF;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+a:hover {
+    color: #FF00FF;
+    background: yellow;
+}
+
+ul {
+    list-style-type: "★ ";
+    font-size: 20px;
+    padding-left: 20px;
+}
+
+p {
+    background: rgba(0, 255, 255, 0.15);
+    border: 2px dashed #00ffea;
+    padding: 8px;
+    margin: 20px 0;
+    animation: shimmer 5s infinite alternate;
+}
+
+@keyframes shimmer {
+    from { color: #00FFEE; }
+    to { color: #FFFFFF; }
+}
+
+.site-banner {
+    margin: -10px -20px 30px -20px;
+    padding: 16px 24px;
+    border-radius: 18px 18px 0 0;
+    background: linear-gradient(90deg, #0077b6, #00c9a7, #9ef01a);
+    box-shadow:
+            0 6px 16px rgba(0, 80, 120, 0.35),
+            0 0 24px rgba(0, 200, 180, 0.5);
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: #ffffff;
+    position: relative;
+    overflow: hidden;
+}
+
+.site-banner::before {
+    content: "";
+    position: absolute;
+    top: -80%;
+    left: -40%;
+    width: 60%;
+    height: 260%;
+    background: radial-gradient(circle at 0 50%, rgba(255,255,255,0.7), transparent 55%);
+    opacity: 0.7;
+    animation: banner-sheen 5s linear infinite;
+}
+
+.site-banner-prefix {
+    font-weight: 900;
+    font-size: 30px;
+    margin-right: 4px;
+    display: inline-block;
+    animation: spinny 1.2s ease-in-out infinite alternate;
+}
+
+.site-banner-text {
+    font-weight: 800;
+    font-size: 24px;
+    text-shadow: 0 0 8px rgba(0, 0, 0, 0.35);
+}
+
+@keyframes spinny {
+    0% {
+        transform: rotate(-6deg) scale(1);
+    }
+    50% {
+        transform: rotate(4deg) scale(1.05);
+    }
+    100% {
+        transform: rotate(-3deg) scale(1.02);
+    }
+}
+
+@keyframes banner-sheen {
+    0% {
+        transform: translateX(-120%);
+    }
+    100% {
+        transform: translateX(160%);
+    }
+}
+
+.construction-marquee {
+    margin: 12px auto 28px;
+    padding: 6px 0;
+    width: 100%;
+    font-size: 18px;
+    font-weight: bold;
+    color: #ffffff;
+
+    background: linear-gradient(90deg, #00b4d8, #48cae4, #52b788);
+    border: 2px dashed #ffffff;
+    border-radius: 12px;
+    text-shadow: 0 0 6px rgba(0,0,0,0.4);
+    box-shadow:
+            0 4px 10px rgba(0, 80, 120, 0.3),
+            0 0 20px rgba(100, 255, 200, 0.4);
+
+    animation: marquee-glow 2.2s ease-in-out infinite;
+}
+
+@keyframes marquee-glow {
+    0% { box-shadow: 0 0 10px #00eaff; }
+    50% { box-shadow: 0 0 20px #68ff9b; }
+    100% { box-shadow: 0 0 10px #00eaff; }
+}
+
+.construction-marquee:hover {
+    filter: hue-rotate(90deg);
+    cursor: wait;
+}
+.last-updated {
+    margin-top: 40px;
+    font-size: 14px;
+    text-align: center;
+    color: #ffffff;
+    opacity: 0.85;
+
+    background: linear-gradient(90deg, #00b4d8, #48cae4, #52b788);
+    padding: 10px 14px;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+    border: 2px dashed #ffffff;
+
+    box-shadow:
+            0 4px 10px rgba(0, 80, 120, 0.15),
+            0 0 18px rgba(0, 200, 180, 0.15);
+}
